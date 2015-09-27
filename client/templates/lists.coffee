@@ -6,7 +6,7 @@ Template.lists.events
     selectors = Session.get('selectors')
     id = $(event.target).data('id')
     console.log id
-    selectors.push(id)
+    selectors.push({id: id})
     Session.set('selectors', selectors)
 
 Template.lists.onRendered ->
@@ -19,3 +19,6 @@ Template.lists.helpers
 Template.generator.helpers
   selectors: ->
     return Session.get('selectors')
+
+  listname: ->
+    return Lists.findOne(_id:@id)?.name
