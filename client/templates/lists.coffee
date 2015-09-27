@@ -5,6 +5,8 @@ Template.lists.events
   'click .listitem': (event) ->
     selectors = Session.get('selectors')
     id = $(event.target).data('id')
+    if not id?
+      return
     console.log id
     selectors.push({id: id})
     Session.set('selectors', selectors)
