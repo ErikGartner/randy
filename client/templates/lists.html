@@ -2,10 +2,10 @@
   <h2>Lists</h2>
   {{#each lists}}
     <div class="ui relaxed divided list">
-      <div class="item listitem" data-id="{{_id}}">
+      <div class="item listitem">
         <i class="large list layout middle aligned icon"></i>
         <div class="content">
-          <a class="header">{{name}}</a>
+          <a class="header" data-id="{{_id}}">{{name}}</a>
           <div class="description">{{_id}}</div>
         </div>
       </div>
