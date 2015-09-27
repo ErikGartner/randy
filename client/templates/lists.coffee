@@ -16,5 +16,6 @@ Template.lists.helpers
   lists: ->
     return Lists.find({})
 
+Template.generator.helpers
   selectors: ->
     return Session.get('selectors')
