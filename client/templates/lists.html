@@ -1,0 +1,47 @@
+<template name="lists">
+  <h2>Lists</h2>
+  {{#each lists}}
+    <div class="ui relaxed divided list">
+      <div class="item listitem" data-id="{{_id}}">
+        <i class="large list layout middle aligned icon"></i>
+        <div class="content">
+          <a class="header">{{name}}</a>
+          <div class="description">{{_id}}</div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+  <button class="fluid ui green right labeled icon button" id="showadd">
+  <i class="plus icon"></i>
+  Add
+  </button>
+
+  <div class="ui small modal">
+    <i class="close icon"></i>
+    <div class="header">
+      Add list
+    </div>
+    <div class="content">
+      <form class="ui form">
+        <div class="field">
+          <label>Name</label>
+          <input id="listname">
+        </div>
+        <div class="field">
+          <label>List</label>
+          <textarea id="listitems"></textarea>
+        </div>
+      </form>
+    </div>
+    <div class="actions">
+      <div class="ui black deny button">
+        Cancel
+      </div>
+      <button class="ui positive right labeled icon button" id="addlist">
+        Add!
+        <i class="checkmark icon"></i>
+      </button>
+    </div>
+  </div>
+
+</template>
