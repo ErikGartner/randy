@@ -1,17 +1,18 @@
 <template name="generator">
   <h2>Randy</h2>
+  <button class="positive fluid ui button" id="randomize">Randymize!</button>
   <div class="ui blue labels">
     {{#each selectors}}
-      <a class="ui label" data-id="{{id}}">
+      <a class="ui label remove-selector" data-id="{{index}}">
         {{listname}}<i class="icon close"></i>
       </a>
     {{/each}}
   </div>
-
-  <button class="positive fluid ui button">Randymize!</button>
-
-  <div class="ui list">
-    <ul>Lena</ul>
+  
+  <div class="ui list" id="results">
+    {{#each results}}
+    <ul>{{data}}</ul>
+    {{/each}}
   </div>
 
 </template>

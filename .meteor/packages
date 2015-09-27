@@ -21,7 +21,6 @@ ecmascript              # Enable ECMAScript2015+ syntax in app code
 
 coffeescript
 semantic:ui-css
-accounts-password
 accounts-facebook
 iandouglas:accounts-ui-semantic-ui
 check

@@ -1,2 +1,2 @@
 Meteor.publish 'lists', ->
-  return Lists.find()
+  return Lists.find({author: @userId})
