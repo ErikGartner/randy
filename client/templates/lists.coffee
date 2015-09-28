@@ -9,7 +9,6 @@ Template.lists.events
       if not err?
         $('#listname').val res.name
         $('#listitems').val _.reduce res.items, (memo, item) ->
-          console.log memo + '\n' + item
           return memo + '\n' + item
         $('#listpublic').prop 'checked', res.public
         $('#addModal').modal('show')
@@ -27,8 +26,8 @@ Template.lists.onRendered ->
   Session.set('selectors', [])
 
 Template.lists.helpers
-  lists: ->
-    return Lists.find({})
+  latestLists: ->
+    return Lists.find()
 
   editListId: ->
     return Session.get('editListId')

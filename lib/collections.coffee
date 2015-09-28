@@ -27,4 +27,14 @@ Schemas.Lists = new SimpleSchema
     autoValue: ->
       return false
 
-Lists.initEasySearch('name')
+  updatedAt:
+    type: Date
+    autoValue: ->
+      if @isUpdate or @isInsert
+        return new Date()
+    denyInsert: true
+
+Lists.initEasySearch 'name',
+  limit: 10
+  use: 'mongo-db'
+  query: -> return $or: [{author: @userId}, {public: true}]
