@@ -20,4 +20,10 @@ ListSchema = new SimpleSchema
     label: 'Items'
     minCount: 1
 
+  public:
+    type: Boolean
+    label: 'Public'
+    autoValue: ->
+      return false
+
 Lists.initEasySearch('name')

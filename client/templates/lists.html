@@ -1,5 +1,5 @@
 <template name="lists">
-  <h2>Your lists</h2>
+  <h2>Lists</h2>
   {{#if currentUser}}
     {{#each lists}}
       <div class="ui relaxed divided list">
@@ -7,7 +7,7 @@
           <i class="large list layout middle aligned icon"></i>
           <div class="content">
             <a class="header" data-id="{{_id}}">{{name}}</a>
-            <!-- <div class="description">{{_id}}</div> -->
+            <div class="description">{{listAuthor}}</div>
           </div>
         </div>
       </div>
@@ -17,7 +17,12 @@
     Add
     </button>
   {{else}}
-    Login before usage!
+    <div class="ui info message">
+      <div class="header">
+        Please login
+      </div>
+      <p>You need to login to use Randy and create awesome lists!</p>
+    </div>
   {{/if}}
 
   <div class="ui small modal">
