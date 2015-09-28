@@ -1,21 +1,23 @@
 <template name="lists">
   <h2>Lists</h2>
   {{#if currentUser}}
+
     {{#each lists}}
       <div class="ui relaxed divided list">
-        <div class="item listitem">
-          <i class="large list layout middle aligned icon"></i>
+        <div class="item">
+          <i class="large {{#if public}}unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
           <div class="content">
-            <a class="header" data-id="{{_id}}">{{name}}</a>
+            <a class="header listitem" data-id="{{_id}}">{{name}}</a>
             <div class="description">{{listAuthor}}</div>
           </div>
         </div>
       </div>
     {{/each}}
     <button class="fluid ui green right labeled icon button" id="showadd">
-    <i class="plus icon"></i>
-    Add
+      <i class="plus icon"></i>
+      Add
     </button>
+
   {{else}}
     <div class="ui info message">
       <div class="header">
@@ -25,8 +27,17 @@
     </div>
   {{/if}}
 
-  <div class="ui small modal">
+
+<!-- Modal for edit / add -->
+  <div class="ui small modal" id="addModal">
     <i class="close icon"></i>
+    <div class="header">
+      {{#if editListId}}
+        Edit list
+      {{else}}
+        Add list
+      {{/if}}
+    </div>
     <div class="content">
       <div class="ui form">
         <div class="two inline fields">
@@ -48,11 +59,20 @@
       </div>
     </div>
     <div class="actions">
-      <div class="ui black deny button">
+      {{#if editListId}}
+        <div class="ui red deny button" id="deleteListButton">
+          Delete
+        </div>
+      {{/if}}
+      <div class="ui black deny button" id="cancelListButton">
         Cancel
       </div>
       <button class="ui positive right labeled icon button" id="addlist">
-        Add!
+        {{#if editListId}}
+          Save
+        {{else}}
+          Add
+        {{/if}}
         <i class="checkmark icon"></i>
       </button>
     </div>

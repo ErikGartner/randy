@@ -1,6 +1,7 @@
 @Lists = new Mongo.Collection('lists')
 
-ListSchema = new SimpleSchema
+@Schemas = {}
+Schemas.Lists = new SimpleSchema
   name:
     type: String
     label: 'Name'

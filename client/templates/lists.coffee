@@ -1,6 +1,18 @@
 Template.lists.events
   'click #showadd': ->
-    $('.small.modal').modal('show')
+    $('#addModal').modal('show')
+
+  'click .showEditList': (event) ->
+    id = $(event.target).data('id')
+
+    Meteor.call 'getList', id, (err, res) ->
+      if not err?
+        $('#listname').val res.name
+        $('#listitems').val _.reduce res.items, (memo, item) ->
+          return memo + item + '\n'
+        $('#listpublic').prop 'checked', res.public
+        $('#addModal').modal('show')
+        Session.set 'editListId', res._id
 
   'click .listitem': (event) ->
     selectors = Session.get('selectors')
@@ -16,3 +28,6 @@ Template.lists.onRendered ->
 Template.lists.helpers
   lists: ->
     return Lists.find({})
+
+  editListId: ->
+    return Session.get('editListId')
