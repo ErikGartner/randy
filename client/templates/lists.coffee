@@ -9,7 +9,8 @@ Template.lists.events
       if not err?
         $('#listname').val res.name
         $('#listitems').val _.reduce res.items, (memo, item) ->
-          return memo + item + '\n'
+          console.log memo + '\n' + item
+          return memo + '\n' + item
         $('#listpublic').prop 'checked', res.public
         $('#addModal').modal('show')
         Session.set 'editListId', res._id
@@ -31,3 +32,9 @@ Template.lists.helpers
 
   editListId: ->
     return Session.get('editListId')
+
+  listAuthor: ->
+    if @author == Meteor.userId()
+      return Meteor.user().profile?.name
+    else
+      return 'Community'

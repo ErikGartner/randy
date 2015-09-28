@@ -1,2 +1,2 @@
 Meteor.publish 'lists', ->
-  return Lists.find({author: @userId})
+  return Lists.find($or: [{author: @userId}, {public: true}])
