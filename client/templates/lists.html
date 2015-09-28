@@ -1,20 +1,24 @@
 <template name="lists">
-  <h2>Lists</h2>
-  {{#each lists}}
-    <div class="ui relaxed divided list">
-      <div class="item listitem">
-        <i class="large list layout middle aligned icon"></i>
-        <div class="content">
-          <a class="header" data-id="{{_id}}">{{name}}</a>
-          <!-- <div class="description">{{_id}}</div> -->
+  <h2>Your lists</h2>
+  {{#if currentUser}}
+    {{#each lists}}
+      <div class="ui relaxed divided list">
+        <div class="item listitem">
+          <i class="large list layout middle aligned icon"></i>
+          <div class="content">
+            <a class="header" data-id="{{_id}}">{{name}}</a>
+            <!-- <div class="description">{{_id}}</div> -->
+          </div>
         </div>
       </div>
-    </div>
-  {{/each}}
-  <button class="fluid ui green right labeled icon button" id="showadd">
-  <i class="plus icon"></i>
-  Add
-  </button>
+    {{/each}}
+    <button class="fluid ui green right labeled icon button" id="showadd">
+    <i class="plus icon"></i>
+    Add
+    </button>
+  {{else}}
+    Login before usage!
+  {{/if}}
 
   <div class="ui small modal">
     <i class="close icon"></i>
