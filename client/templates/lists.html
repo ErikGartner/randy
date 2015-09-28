@@ -27,20 +27,25 @@
 
   <div class="ui small modal">
     <i class="close icon"></i>
-    <div class="header">
-      Add list
-    </div>
     <div class="content">
-      <form class="ui form">
-        <div class="field">
-          <label>Name</label>
-          <input id="listname">
+      <div class="ui form">
+        <div class="two inline fields">
+          <div class="field">
+            <label>Name</label>
+            <input id="listname">
+          </div>
+          <div class="field">
+            <div class="ui toggle checkbox">
+              <input type="checkbox" id="listpublic">
+              <label for="listpublic">Make list public</label>
+            </div>
+          </div>
         </div>
         <div class="field">
           <label>List</label>
           <textarea id="listitems"></textarea>
         </div>
-      </form>
+      </div>
     </div>
     <div class="actions">
       <div class="ui black deny button">

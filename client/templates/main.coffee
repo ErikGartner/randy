@@ -5,5 +5,6 @@ Template.body.events
     if name == '' or items == ''
       return
     Meteor.call 'addList', name, items
+    $('#listname').val('')
+    $('#listitems').val('')
     return false
-    
