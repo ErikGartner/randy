@@ -1,5 +1,7 @@
 <template name="generator">
-  <div class="segment">
+
+    <div class="row"></div>
+
     <div class="ui blue labels">
       {{#each selectors}}
         <a class="ui label remove-selector" data-id="{{index}}">
@@ -7,9 +9,11 @@
         </a>
       {{/each}}
     </div>
-    
+
     <button class="positive fluid ui button" id="randomize">Randymize!</button>
 
+  <div class="ui raised segment">
+    <a class="ui teal ribbon label">Results</a>
     <div class="ui list" id="results">
       {{#each results}}
       <ul>{{data}}</ul>
