@@ -6,3 +6,4 @@ Template.body.events
       return
     Meteor.call 'addList', name, items
     return false
+    

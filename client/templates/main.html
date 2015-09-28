@@ -1,23 +1,41 @@
 <body>
   <div class="ui container">
     <div class="ui grid">
-      <div class="four wide column">
-        {{> user}}
-      </div>
-      <div class="eight wide column">
-        <h2 class="ui icon header">
-          <i class="random icon"></i>
-          <div class="content">
-            Randy
-            <div class="sub header">The easy list randomizer!</div>
+      <div class="row"></div>
+      <div class="row">
+        <div class="four wide column">
+          {{> lists}}
+        </div>
+        <div class="eight wide column">
+          <div class="ui center aligned container">
+            <h2 class="ui icon header">
+              <i class="random icon"></i>
+              <div class="content">
+                Randy
+                <div class="sub header">The easy list randomizer!</div>
+              </div>
+            </h2>
           </div>
-        </h2>
-        {{> generator}}
-      </div>
-      <div class="four wide column">
-        {{> lists}}
 
+          {{> generator}}
+        </div>
+        <div class="four wide column">
+          {{> user}}
+        </div>
       </div>
+      <div class="row">
+        <div class="four wide column">
+              </div>
+
+        <div class="eight wide column">
+
+
+
+          </div>
+
+
+        <div class="four wide column"></div>
+    </div>
     </div>
   </div>
 </body>
