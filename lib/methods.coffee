@@ -10,6 +10,8 @@ Meteor.methods
     _.map items, (val) ->
       check val, String
       return val.trim()
+    _.filter items, (val) ->
+      return val != ''
     name = name.trim()
 
     Lists.insert author: uid, name: name, items: items
