@@ -6,8 +6,10 @@ Meteor.methods
 
     check name, String
     check items, String
-    items = items.split('\n')
-    _.each items, (val) ->
+    items = items.trim().split('\n')
+    _.map items, (val) ->
       check val, String
+      return val.trim()
+    name = name.trim()
 
     Lists.insert author: uid, name: name, items: items
