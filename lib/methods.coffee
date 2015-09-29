@@ -68,7 +68,7 @@ Meteor.methods
       items = []
       for id in ids
         list = Lists.findOne({_id: id})
-        if list?.author != uid and list?.public
+        if list?.author != uid and not list?.public
           throw new Meteor.Error('not-authorized')
 
         items.push Random.choice(list.items)
@@ -82,7 +82,7 @@ Meteor.methods
       throw new Meteor.Error('not-authorized')
 
     list = Lists.findOne(_id:id)
-    if list?.author != uid and list?.public
+    if list?.author != uid and not list?.public
       throw new Meteor.Error('not-authorized')
 
     check id, String

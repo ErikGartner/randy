@@ -24,7 +24,6 @@ coffeescript
 semantic:ui-css
 accounts-base
 accounts-facebook
-accounts-password
 iandouglas:accounts-ui-semantic-ui
 matteodem:easy-search
 aldeed:collection2

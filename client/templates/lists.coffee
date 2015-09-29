@@ -27,7 +27,7 @@ Template.lists.onRendered ->
 
 Template.lists.helpers
   latestLists: ->
-    return Lists.find()
+    return Lists.find({author: Meteor.userId()}, {sort: {updatedAt: -1}, limit: 15})
 
   editListId: ->
     return Session.get('editListId')

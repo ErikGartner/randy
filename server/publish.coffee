@@ -1,2 +1,2 @@
 Meteor.publish 'lists', ->
-  return Lists.find {author: @userId}, {sort: {updatedAt: -1}, limit: 15, fields: {items: 0}}
+  return Lists.find {$or: [{author: @userId}, {public: true}]}, {fields: {items: 0}}
