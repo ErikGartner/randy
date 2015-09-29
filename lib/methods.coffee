@@ -13,6 +13,7 @@ Meteor.methods
       return val.trim()
     items = _.filter items, (val) ->
       return val != ''
+    items.sort()
     name = name.trim()
 
     Lists.insert author: uid, name: name, items: items, public: publicList
@@ -47,6 +48,7 @@ Meteor.methods
       return val.trim()
     items = _.filter items, (val) ->
       return val != ''
+    items.sort()
     name = name.trim()
 
     Lists.update {_id:id}, $set: name:name, items:items, public: publicList
