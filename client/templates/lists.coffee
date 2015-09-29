@@ -35,5 +35,7 @@ Template.lists.helpers
   listAuthor: ->
     if @author == Meteor.userId()
       return Meteor.user().profile?.name
+    else if @author == 'RANDY'
+      return 'Randy'
     else
       return 'Community'

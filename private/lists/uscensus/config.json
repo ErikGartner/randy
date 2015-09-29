@@ -1,0 +1,5 @@
+[
+  {"name": "US Census Female Names", "file": "uscensus_female.txt"},
+  {"name": "US Census Male Names", "file": "uscensus_male.txt"},
+  {"name": "US Top 2500 Lastnames", "file": "uscensus_last_top2500.txt"}
+]

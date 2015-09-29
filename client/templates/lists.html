@@ -38,12 +38,14 @@
     {{/ifEsIsSearching}}
     </div>
 
-    <button class="fluid ui green right labeled icon button" id="showadd">
-      <i class="plus icon"></i>
-      Add
-    </button>
-
-
+    <div class="ui fluid buttons">
+      {{> esLoadMoreButton index="lists" class="ui blue button"}}
+      <button class="ui green right labeled icon button" id="showadd">
+        <i class="plus icon"></i>
+        Add
+      </button>
+    </div>
+    
   {{else}}
     <div class="ui info message">
       <div class="header">
@@ -104,17 +106,4 @@
     </div>
   </div>
 
-</template>
-
-
-<template name="searchResult">
-    <div class="ui relaxed divided list">
-      <div class="item">
-        <i class="large {{#if doc.public}}unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{doc._id}}"></i>
-        <div class="content">
-          <a class="header listitem" data-id="{{doc._id}}">{{doc.name}}</a>
-          <div class="description">{{listAuthor}}</div>
-        </div>
-      </div>
-    </div>
 </template>

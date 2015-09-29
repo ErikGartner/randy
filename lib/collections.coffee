@@ -5,16 +5,11 @@ Schemas.Lists = new SimpleSchema
   name:
     type: String
     label: 'Name'
-    max: 200
+    max: 40
 
   author:
     type: String
     label: 'Author ID'
-    custom: ->
-      if Meteor.isServer
-        user = Meteor.users.findOne _id: @value
-        if not user?
-          return 'invalid-foreign-key'
 
   items:
     type: [String]
@@ -34,7 +29,7 @@ Schemas.Lists = new SimpleSchema
 
 Lists.attachSchema Schemas.Lists
 Lists.initEasySearch 'name',
-  limit: 15
+  limit: 10
   use: 'mongo-db'
   returnFields: ['name', 'author', '_id', 'public', 'updatedAt']
   query: (searchString, opts) ->
