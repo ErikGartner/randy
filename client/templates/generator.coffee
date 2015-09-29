@@ -12,16 +12,11 @@ Template.generator.helpers
 
 Template.generator.events
   'click #randomize': ->
-    selectors = Session.get('selectors')
-    results = []
-    for i in [1..5]
-      result = ''
-      for selector in selectors
-        items = Lists.findOne(_id:selector.id).items
-        result += ' ' + _.sample(items)
-
-      results.push data:result
-    Session.set('results', results)
+    selectors = _.map Session.get('selectors'), (val) -> return val.id
+    Meteor.call 'sampleLists', selectors, 5, (err, res) ->
+      console.log res
+      
+    #Session.set('results', results)
 
   'click .remove-selector': (event) ->
     selector = $(event.target).data('id')

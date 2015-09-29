@@ -51,19 +51,32 @@ Meteor.methods
 
     Lists.update {_id:id}, $set: name:name, items:items, public: publicList
 
-  sampleList: (id, n) ->
+  sampleLists: (ids, n) ->
+    if Meteor.isClient
+      return [[]]
+
     uid = Meteor.userId()
     if !uid
       throw new Meteor.Error('not-authorized')
 
     check n, Number
-    check id, String
+    check ids, Array
+    _.each ids, (val) ->
+      check val, String
+    lists = Lists.find({_id: $in: ids})
 
-    list = Lists.findOne(_id:id)
-    if list?.author != uid and list?.public
-      throw new Meteor.Error('not-authorized')
+    randomLists = []
+    for x in [1..n]
+      items = []
+      for list in lists
+        if list?.author != uid and list?.public
+          throw new Meteor.Error('not-authorized')
 
-    return Random.choice(list.items)
+        items.push Random.choice(list?.items)
+
+      randomLists.push items
+
+    return randomLists
 
   getList: (id) ->
     uid = Meteor.userId()
