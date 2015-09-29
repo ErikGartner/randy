@@ -43,9 +43,9 @@ Meteor.methods
     check id, String
 
     items = items.trim().split('\n')
-    _.map items, (val) ->
+    items = _.map items, (val) ->
       return val.trim()
-    _.filter items, (val) ->
+    items = _.filter items, (val) ->
       return val != ''
     name = name.trim()
 
