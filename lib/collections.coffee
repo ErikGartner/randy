@@ -24,8 +24,6 @@ Schemas.Lists = new SimpleSchema
   public:
     type: Boolean
     label: 'Public'
-    autoValue: ->
-      return false
 
   updatedAt:
     type: Date
