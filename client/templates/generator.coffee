@@ -1,8 +1,6 @@
 Template.generator.helpers
   selectors: ->
-    return _.map Session.get('selectors'), (val, index) ->
-      val.index = index
-      return val
+    return Session.get('selectors')
 
   listname: ->
     return Lists.findOne(_id:@id)?.name
@@ -21,7 +19,7 @@ Template.generator.events
       Session.set('results', res)
 
   'click .remove-selector': (event) ->
-    selector = $(event.target).data('id')
+    selector = $(event.target).index()
     selectors = Session.get('selectors')
     selectors.splice(selector, 1)
     Session.set('selectors', selectors)
