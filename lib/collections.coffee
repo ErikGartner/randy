@@ -29,11 +29,19 @@ Schemas.Lists = new SimpleSchema
 
   updatedAt:
     type: Date
+    label: 'Last updated'
     autoValue: ->
       if @isUpdate or @isInsert
         return new Date()
-    denyInsert: true
 
+Lists.attachSchema Schemas.Lists
 Lists.initEasySearch 'name',
   limit: 15
   use: 'mongo-db'
+  query: (searchString, opts) ->
+    query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString)
+    query = $and: [
+      query
+      $or: [{author: opts.publishScope.userId}, {public: true}]
+    ]
+    return query
