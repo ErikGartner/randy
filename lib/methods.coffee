@@ -9,9 +9,9 @@ Meteor.methods
     check publicList, Boolean
 
     items = items.trim().split('\n')
-    _.map items, (val) ->
+    items = _.map items, (val) ->
       return val.trim()
-    _.filter items, (val) ->
+    items = _.filter items, (val) ->
       return val != ''
     name = name.trim()
 
@@ -63,19 +63,17 @@ Meteor.methods
     check ids, Array
     _.each ids, (val) ->
       check val, String
-    lists = Lists.find({_id: $in: ids})
-
     randomLists = []
     for x in [1..n]
       items = []
-      for list in lists
+      for id in ids
+        list = Lists.findOne({_id: id})
         if list?.author != uid and list?.public
           throw new Meteor.Error('not-authorized')
 
-        items.push Random.choice(list?.items)
+        items.push Random.choice(list.items)
 
       randomLists.push items
-
     return randomLists
 
   getList: (id) ->

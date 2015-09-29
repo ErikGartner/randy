@@ -14,9 +14,13 @@ Template.generator.events
   'click #randomize': ->
     selectors = _.map Session.get('selectors'), (val) -> return val.id
     Meteor.call 'sampleLists', selectors, 5, (err, res) ->
+      if err
+        console.log 'Error while getting samples!'
+        return
       console.log res
-      
-    #Session.set('results', results)
+      res = _.map res, (val) -> return {items: _.map val, (v) -> return {item: v}}
+      console.log res
+      Session.set('results', res)
 
   'click .remove-selector': (event) ->
     selector = $(event.target).data('id')

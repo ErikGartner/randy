@@ -36,7 +36,7 @@ Lists.attachSchema Schemas.Lists
 Lists.initEasySearch 'name',
   limit: 15
   use: 'mongo-db'
-  returnFields: {items: 0}
+  returnFields: ['name', 'author', '_id', 'public', 'updatedAt']
   query: (searchString, opts) ->
     query = EasySearch.getSearcher(this.use).defaultQuery(this, searchString)
     query = $and: [

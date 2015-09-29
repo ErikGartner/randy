@@ -14,10 +14,21 @@
     </div>
 
     <a class="ui teal ribbon label">Results</a>
-    <div class="ui list" id="results">
-      {{#each results}}
-        <ul><h3>{{data}}</h3></ul>
-      {{/each}}
+
+    <div class="ui container" style="padding-top:5px;">
+      {{#if results}}
+      <table class="ui very selectable basic table">
+        <tbody>
+          {{#each results}}
+          <tr>
+            {{#each items}}
+              <td>{{item}}</td>
+            {{/each}}
+          </tr>
+          {{/each}}
+        </tbody>
+      </table>
+      {{/if}}
     </div>
 
   </div>
