@@ -1,5 +1,9 @@
 <template name="generator">
-    <h2>Generator</h2>
+  <h2>Generator</h2>
+  <div class="ui raised segment">
+
+    <a class="ui blue ribbon label">Query</a>
+    <div class="ui container" style="padding:5px;">
     <div class="ui blue labels">
       {{#each selectors}}
         <a class="ui label remove-selector" data-id="{{index}}">
@@ -7,8 +11,7 @@
         </a>
       {{/each}}
     </div>
-
-  <div class="ui raised segment">
+    </div>
 
     <a class="ui teal ribbon label">Results</a>
     <div class="ui list" id="results">

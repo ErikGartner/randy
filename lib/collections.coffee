@@ -35,6 +35,5 @@ Schemas.Lists = new SimpleSchema
     denyInsert: true
 
 Lists.initEasySearch 'name',
-  limit: 10
+  limit: 15
   use: 'mongo-db'
-  query: -> return $or: [{author: @userId}, {public: true}]
