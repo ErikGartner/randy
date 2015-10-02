@@ -1,4 +1,4 @@
-Template.body.events
+Template.home.events
   'click #addlist': ->
     name = $('#listname').val()
     items = $('#listitems').val()
