@@ -109,10 +109,15 @@ Meteor.methods
     if not list.public
       throw new Meteor.Error('not-authorized')
 
+    if Meteor.user()?.services?.facebook?.first_name?
+      listname = Meteor.user().services.facebook.first_name + "'s " + list.name
+    else
+      listname = Meteor.user().profile?.name + "'s " + list.name
+
     Lists.insert
       author: uid
       items: list.items
       public: false
-      name: Meteor.user()?.profile?.first_name + "'s " + list.name
+      name: listname
       ancestor: list._id
     return true
