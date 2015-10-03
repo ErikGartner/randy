@@ -27,6 +27,11 @@ Schemas.Lists = new SimpleSchema
       if @isUpdate or @isInsert
         return new Date()
 
+  ancestor:
+    type: String
+    label: 'Forked from'
+    optional: true
+
 Lists.attachSchema Schemas.Lists
 Lists.initEasySearch 'name',
   limit: 10

@@ -4,7 +4,7 @@ Template.listeditor.onRendered ->
       $('#listname').val ''
       $('#listitems').val ''
       $('#listpublic').prop 'checked', false
-      Session.set 'editListId', undefined
+      Session.set 'activeList', undefined
 
 Template.body.events
   'click #addlist': ->
@@ -14,7 +14,8 @@ Template.body.events
     if name == '' or items == ''
       return
 
-    id = Session.get 'editListId'
+    activeList = Session.get 'activeList'
+    id = activeList.id
     if id?
       Meteor.call 'editList', id, name, items, setPublic
     else
@@ -22,14 +23,24 @@ Template.body.events
     return false
 
   'click #deleteListButton': ->
-    id = Session.get 'editListId'
-    if id?
+    activeList = Session.get 'activeList'
+    if activeList?
+      id = activeList.id
       Meteor.call 'deleteList', id
-      Session.set 'editListId', undefined
       selectors = Session.get 'selectors'
       Session.set 'selectors', _.reject selectors, (val) -> return val.id == id
     return false
 
+  'click #forkButton': ->
+    activeList = Session.get 'activeList'
+    if activeList?
+      Meteor.call 'forkList', activeList.id
+    return false
+
 Template.listeditor.helpers
-  editListId: ->
-    return Session.get('editListId')
+  activeList: ->
+    return Session.get('activeList')
+
+  isMyList: ->
+    return (not Session.get('activeList')? or
+            Session.get('activeList')?.author == Meteor.userId())

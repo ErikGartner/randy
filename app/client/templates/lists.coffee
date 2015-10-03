@@ -12,7 +12,7 @@ Template.lists.events
           return memo + '\n' + item
         $('#listpublic').prop 'checked', res.public
         $('#addModal').modal 'show'
-        Session.set 'editListId', res._id
+        Session.set 'activeList', {id: res._id, author: res.author}
 
   'click .listitem': (event) ->
     selectors = Session.get('selectors')

@@ -3,49 +3,48 @@
   <div class="ui small modal" id="addModal">
     <i class="close icon"></i>
     <div class="header">
-      {{#if editListId}}
-        Edit list
-      {{else}}
-        Add list
-      {{/if}}
+      {{#if activeList}}Edit{{else}}Add{{/if}} list
     </div>
     <div class="content">
       <div class="ui form">
         <div class="two inline fields">
-          <div class="field">
+          <div class="field {{#if isMyList}}{{else}}disabled{{/if}}">
             <label>Name</label>
             <input id="listname">
           </div>
-          <div class="field">
+          <div class="field {{#if isMyList}}{{else}}disabled{{/if}}">
             <div class="ui toggle checkbox">
               <input type="checkbox" id="listpublic">
               <label for="listpublic">Public List</label>
             </div>
           </div>
         </div>
-        <div class="field">
+        <div class="field {{#if isMyList}}{{else}}disabled{{/if}}">
           <label>List</label>
           <textarea id="listitems"></textarea>
         </div>
       </div>
     </div>
     <div class="actions">
-      {{#if editListId}}
-        <div class="ui red deny button" id="deleteListButton">
-          Delete
-        </div>
+      {{#if activeList}}
+        {{#if isMyList}}
+          <div class="ui red deny button" id="deleteListButton">
+            Delete
+          </div>
+        {{/if}}
       {{/if}}
       <div class="ui black deny button" id="cancelListButton">
         Cancel
       </div>
-      <button class="ui positive right labeled icon button" id="addlist">
-        {{#if editListId}}
-          Save
+      {{#if activeList}}
+        {{#if isMyList}}
+          <button class="ui positive right labeled icon button" id="addlist">Save<i class="checkmark icon"></i></button>
         {{else}}
-          Add
+          <button class="ui positive right labeled icon button" id="forkButton">Fork<i class="fork icon"></i></button>
         {{/if}}
-        <i class="checkmark icon"></i>
-      </button>
+      {{else}}
+        <button class="ui positive right labeled icon button" id="addlist">Add<i class="checkmark icon"></i></button>
+      {{/if}}
     </div>
   </div>
 </template>

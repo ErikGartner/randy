@@ -2,6 +2,8 @@ CHANGELOG
 =========
 
 ## [Current]
+### Added
+- Forking!
 
 ### Modified
 - Updated Meteor to 1.2.0.2
