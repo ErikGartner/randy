@@ -28,5 +28,4 @@ check
 audit-argument-checks
 iron:router
 datariot:ganalytics
-accounts-password
-msavin:mongol
+accounts-facebook

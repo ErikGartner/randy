@@ -2,6 +2,8 @@ CHANGELOG
 =========
 
 ## [Current]
+
+## [0.4] - 2015-10-03
 ### Added
 - Forking!
 
