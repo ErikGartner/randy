@@ -2,6 +2,8 @@ CHANGELOG
 =========
 
 ## [Current]
+### Modified
+- Fixed case insensitive sorting.
 
 ## [0.4] - 2015-10-03
 ### Added

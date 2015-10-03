@@ -13,7 +13,10 @@ Meteor.methods
       return val.trim()
     items = _.filter items, (val) ->
       return val != ''
-    items.sort()
+    items.sort (a, b) ->
+      res = a.toLowerCase().localeCompare(b.toLowerCase())
+      if res == 0
+        return a.localeCompare(b)
     name = name.trim()
 
     Lists.insert author: uid, name: name, items: items, public: publicList
@@ -50,7 +53,10 @@ Meteor.methods
       return val.trim()
     items = _.filter items, (val) ->
       return val != ''
-    items.sort()
+    items.sort (a, b) ->
+      res = a.toLowerCase().localeCompare(b.toLowerCase())
+      if res == 0
+        return a.localeCompare(b)
     name = name.trim()
 
     Lists.update {_id:id}, $set: name:name, items:items, public: publicList
