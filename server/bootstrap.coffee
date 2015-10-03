@@ -28,4 +28,5 @@ Meteor.startup ->
 
   if Lists.find(author:'RANDY').count() == 0
     loadNameLists('lists/behindthename/')
+    loadNameLists('lists/behindthesurname/')
     loadNameLists('lists/uscensus/')

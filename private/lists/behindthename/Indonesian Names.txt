@@ -1,4 +1,4 @@
-Adi 
+Adi
 Agung
 Bambang
 Batari
@@ -35,10 +35,9 @@ Purnoma
 Putra
 Putri
 Raharjo
-Raja 
+Raja
 Ratu
 Sari
-Sari 
 Setiawan
 Sinta
 Slamet
