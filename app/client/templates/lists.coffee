@@ -29,9 +29,6 @@ Template.lists.helpers
   latestLists: ->
     return Lists.find({author: Meteor.userId()}, {sort: {updatedAt: -1}, limit: 15})
 
-  editListId: ->
-    return Session.get('editListId')
-
   listAuthor: ->
     if @author == Meteor.userId()
       return Meteor.user().profile?.name

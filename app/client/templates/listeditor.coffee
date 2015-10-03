@@ -1,5 +1,6 @@
-Template.home.events
+Template.body.events
   'click #addlist': ->
+    console.log 'Hello'
     name = $('#listname').val()
     items = $('#listitems').val()
     setPublic =  $('#listpublic').prop 'checked'
@@ -36,3 +37,7 @@ Template.home.events
     $('#listitems').val ''
     $('#listpublic').prop 'checked', false
     return false
+
+Template.listeditor.helpers
+  editListId: ->
+    return Session.get('editListId')

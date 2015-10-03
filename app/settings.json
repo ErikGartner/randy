@@ -3,6 +3,8 @@
     "ga": {
       "account":"UA-68367279-1"
     },
-    "randy_version": 0.3
+    "randy": {
+      "version": 0.3
+    }
   }
 }

@@ -45,7 +45,7 @@
         Add
       </button>
     </div>
-    
+
   {{else}}
     <div class="ui info message">
       <div class="header">
@@ -55,55 +55,6 @@
     </div>
   {{/if}}
 
-
-<!-- Modal for edit / add -->
-  <div class="ui small modal" id="addModal">
-    <i class="close icon"></i>
-    <div class="header">
-      {{#if editListId}}
-        Edit list
-      {{else}}
-        Add list
-      {{/if}}
-    </div>
-    <div class="content">
-      <div class="ui form">
-        <div class="two inline fields">
-          <div class="field">
-            <label>Name</label>
-            <input id="listname">
-          </div>
-          <div class="field">
-            <div class="ui toggle checkbox">
-              <input type="checkbox" id="listpublic">
-              <label for="listpublic">Public List</label>
-            </div>
-          </div>
-        </div>
-        <div class="field">
-          <label>List</label>
-          <textarea id="listitems"></textarea>
-        </div>
-      </div>
-    </div>
-    <div class="actions">
-      {{#if editListId}}
-        <div class="ui red deny button" id="deleteListButton">
-          Delete
-        </div>
-      {{/if}}
-      <div class="ui black deny button" id="cancelListButton">
-        Cancel
-      </div>
-      <button class="ui positive right labeled icon button" id="addlist">
-        {{#if editListId}}
-          Save
-        {{else}}
-          Add
-        {{/if}}
-        <i class="checkmark icon"></i>
-      </button>
-    </div>
-  </div>
+  {{> listeditor}}
 
 </template>
