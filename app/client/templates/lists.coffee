@@ -1,6 +1,6 @@
 Template.lists.events
   'click #showadd': ->
-    $('#addModal').modal('show')
+    $('#addModal').modal 'show'
 
   'click .showEditList': (event) ->
     id = $(event.target).data('id')
@@ -11,7 +11,7 @@ Template.lists.events
         $('#listitems').val _.reduce res.items, (memo, item) ->
           return memo + '\n' + item
         $('#listpublic').prop 'checked', res.public
-        $('#addModal').modal('show')
+        $('#addModal').modal 'show'
         Session.set 'editListId', res._id
 
   'click .listitem': (event) ->
