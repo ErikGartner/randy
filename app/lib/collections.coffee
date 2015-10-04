@@ -1,4 +1,5 @@
 @Lists = new Mongo.Collection('lists')
+@Favorites = new Mongo.Collection('favorites')
 
 @Schemas = {}
 Schemas.Lists = new SimpleSchema
@@ -32,7 +33,19 @@ Schemas.Lists = new SimpleSchema
     label: 'Forked from'
     optional: true
 
+Schemas.Favorites = new SimpleSchema
+  user:
+    type: String
+    label: 'User'
+
+  lists:
+    type: [String]
+    label: 'Favorite lists'
+    minCount: 0
+
 Lists.attachSchema Schemas.Lists
+Lists.attachSchema Schemas.Favorites
+
 Lists.initEasySearch 'name',
   limit: 10
   use: 'mongo-db'

@@ -27,12 +27,11 @@ Template.lists.onRendered ->
 
 Template.lists.helpers
   latestLists: ->
-    return Lists.find({author: Meteor.userId()}, {sort: {updatedAt: -1}, limit: 15})
+    return Lists.find({author: Meteor.userId()},
+                      {sort: {updatedAt: -1}, limit: 15})
 
   listAuthor: ->
-    if @author == Meteor.userId()
-      return Meteor.user().profile?.name
-    else if @author == 'RANDY'
+    if @author == 'RANDY'
       return 'Randy'
     else
-      return 'Community'
+      return Meteor.users.findOne(_id: @author)?.profile?.name

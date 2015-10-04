@@ -28,5 +28,6 @@ check
 audit-argument-checks
 iron:router
 datariot:ganalytics
+reywood:publish-composite
 accounts-password
 msavin:mongol
