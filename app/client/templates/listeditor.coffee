@@ -15,8 +15,8 @@ Template.body.events
       return
 
     activeList = Session.get 'activeList'
-    id = activeList.id
-    if id?
+    if activeList?
+      id = activeList.id
       Meteor.call 'editList', id, name, items, setPublic
     else
       Meteor.call 'addList', name, items, setPublic
