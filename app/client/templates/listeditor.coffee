@@ -6,6 +6,10 @@ Template.listeditor.onRendered ->
       $('#listpublic').prop 'checked', false
       Session.set 'activeList', undefined
 
+  $('#forkModal').modal
+    onHidden: ->
+      Session.set 'activeList', undefined
+
 Template.body.events
   'click #addlist': ->
     name = $('#listname').val()
@@ -37,6 +41,14 @@ Template.body.events
       Meteor.call 'forkList', activeList.id
     return false
 
+  'click #favoriteButton': (event) ->
+    activeList = Session.get 'activeList'
+    if activeList?
+      if Favorites.findOne(lists: activeList.id)?
+        Meteor.call 'removeFavorite', activeList.id
+      else
+        Meteor.call 'addFavorite', activeList.id
+
 Template.listeditor.helpers
   activeList: ->
     return Session.get('activeList')
@@ -44,3 +56,10 @@ Template.listeditor.helpers
   isMyList: ->
     return (not Session.get('activeList')? or
             Session.get('activeList')?.author == Meteor.userId())
+
+  isFavorite: ->
+    activeList = Session.get 'activeList'
+    if activeList?
+      return Favorites.findOne(lists: activeList.id)?
+    else
+      return false

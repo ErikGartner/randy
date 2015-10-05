@@ -16,9 +16,9 @@
       {{#ifEsInputIsEmpty index="lists"}}
           {{#each latestLists}}
               <div class="item">
-                <i class="large link icon {{#if public}}unlock alternate{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
+                <i class="large link icon {{#if public}}alternate unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
                 <div class="content">
-                  <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a><i class="icon {{#if isFavorite}}red{{else}}empty{{/if}} heart favoriteIcon" data-id="{{_id}}"></i></span>
+                  <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a></span>
                   <div class="description">{{listAuthor}}</div>
                 </div>
               </div>
@@ -29,7 +29,7 @@
         <div class="item">
           <i class="large {{#if public}}unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
           <div class="content">
-            <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a><i class="icon {{#if isFavorite}}red{{else}}empty{{/if}} heart favoriteIcon" data-id="{{_id}}"></i></span>
+            <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a></span>
             <div class="description">{{listAuthor}}</div>
           </div>
         </div>

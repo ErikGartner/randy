@@ -107,6 +107,9 @@ Meteor.methods
     if !uid?
       throw new Meteor.Error('not-authorized')
 
+    if Meteor.isClient
+      return true
+
     check id, String
     list = Lists.findOne(_id:id)
     if not list?

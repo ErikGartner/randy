@@ -16,7 +16,7 @@ Template.lists.events
           Session.set 'activeList', {id: res._id, author: res.author}
     else
       $('#forkModal').modal 'show'
-      Session.set 'activeList', {id: res._id, author: res.author}
+      Session.set 'activeList', {id: id}
 
   'click .listitem': (event) ->
     selectors = Session.get('selectors')
@@ -25,13 +25,6 @@ Template.lists.events
       return
     selectors.push({id: id})
     Session.set('selectors', selectors)
-
-  'click .favoriteIcon': (event) ->
-    id = $(event.target).data('id')
-    if Favorites.findOne(lists: @_id)?
-      Meteor.call 'removeFavorite', id
-    else
-      Meteor.call 'addFavorite', id
 
 Template.lists.onRendered ->
   Session.set('selectors', [])
