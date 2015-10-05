@@ -39,6 +39,7 @@ Template.body.events
     activeList = Session.get 'activeList'
     if activeList?
       Meteor.call 'forkList', activeList.id
+    $('#forkModal').modal 'hide'
     return false
 
   'click #favoriteButton': (event) ->
@@ -48,6 +49,8 @@ Template.body.events
         Meteor.call 'removeFavorite', activeList.id
       else
         Meteor.call 'addFavorite', activeList.id
+    $('#forkModal').modal 'hide'
+    return false
 
 Template.listeditor.helpers
   activeList: ->
