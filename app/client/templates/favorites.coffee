@@ -3,7 +3,8 @@ Template.favorites.helpers
     favorites = Favorites.findOne(user: Meteor.userId())
     if not favorites?
       return undefined
-    return Lists.find(_id: $in: favorites.lists)
+    else
+      return Lists.find {_id: $in: favorites.lists}, {sort: {name: 1}}
 
 Template.favorites.events
   'click .favoriteIcon': (event) ->
