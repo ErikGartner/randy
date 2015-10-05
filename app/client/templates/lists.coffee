@@ -5,14 +5,18 @@ Template.lists.events
   'click .showEditList': (event) ->
     id = $(event.target).data('id')
 
-    Meteor.call 'getList', id, (err, res) ->
-      if not err?
-        $('#listname').val res.name
-        $('#listitems').val _.reduce res.items, (memo, item) ->
-          return memo + '\n' + item
-        $('#listpublic').prop 'checked', res.public
-        $('#addModal').modal 'show'
-        Session.set 'activeList', {id: res._id, author: res.author}
+    if Lists.findOne(_id:id)?.author == Meteor.userId()
+      Meteor.call 'getList', id, (err, res) ->
+        if not err?
+          $('#listname').val res.name
+          $('#listitems').val _.reduce res.items, (memo, item) ->
+            return memo + '\n' + item
+          $('#listpublic').prop 'checked', res.public
+          $('#addModal').modal 'show'
+          Session.set 'activeList', {id: res._id, author: res.author}
+    else
+      $('#forkModal').modal 'show'
+      Session.set 'activeList', {id: res._id, author: res.author}
 
   'click .listitem': (event) ->
     selectors = Session.get('selectors')
