@@ -127,3 +127,33 @@ Meteor.methods
       name: listname
       ancestor: list._id
     return true
+
+  addFavorite: (id) ->
+    uid = Meteor.userId()
+    if !uid?
+      throw new Meteor.Error('not-authorized')
+
+    check id, String
+    list = Lists.findOne(_id:id)
+    if not list?
+      throw new Meteor.Error('invalid id')
+
+    favorites = Favorites.findOne(user:uid)
+    if not favorites?
+      favorites = {user: uid, lists: [id]}
+    else if id not in favorites.lists
+      favorites.lists.push(id)
+    Favorites.upsert({user:uid}, {$set:favorites})
+    return true
+
+  removeFavorite: (id) ->
+    uid = Meteor.userId()
+    if !uid?
+      throw new Meteor.Error('not-authorized')
+
+    check id, String
+    favorites = Favorites.findOne(user:uid)
+    if favorites?
+      favorites.lists = _.reject favorites.lists, (val)-> return val == id
+      Favorites.update({_id:favorites._id}, {$set: favorites})
+    return true

@@ -44,7 +44,7 @@ Schemas.Favorites = new SimpleSchema
     minCount: 0
 
 Lists.attachSchema Schemas.Lists
-Lists.attachSchema Schemas.Favorites
+Favorites.attachSchema Schemas.Favorites
 
 Lists.initEasySearch 'name',
   limit: 10

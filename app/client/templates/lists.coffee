@@ -22,6 +22,13 @@ Template.lists.events
     selectors.push({id: id})
     Session.set('selectors', selectors)
 
+  'click .favoriteIcon': (event) ->
+    id = $(event.target).data('id')
+    if Favorites.findOne(lists: @_id)?
+      Meteor.call 'removeFavorite', id
+    else
+      Meteor.call 'addFavorite', id
+
 Template.lists.onRendered ->
   Session.set('selectors', [])
 
@@ -35,3 +42,6 @@ Template.lists.helpers
       return 'Randy'
     else
       return Meteor.users.findOne(_id: @author)?.profile?.name
+
+  isFavorite: ->
+    return Favorites.findOne(lists: @_id)?
