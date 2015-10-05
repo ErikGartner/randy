@@ -1,7 +1,10 @@
 CHANGELOG
 =========
 
-## [Current]
+## [0.5] - 2015-10-0.3
+### Added
+- Favorites
+
 ### Modified
 - Fixed case insensitive sorting.
 
