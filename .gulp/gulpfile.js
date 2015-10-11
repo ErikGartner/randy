@@ -29,9 +29,9 @@ gulp.task('bump', function() {
   gulp.src('../settings.json')
   .pipe(bump({key: "public.randy.version", type: argv.bump}))
   .pipe(gulp.dest('../'));
-  gulp.src('../package.json')
+  gulp.src('./package.json')
   .pipe(bump({key: "version", type: argv.bump}))
-  .pipe(gulp.dest('../'));
+  .pipe(gulp.dest('./'));
 });
 
 gulp.task('changelog', function () {
