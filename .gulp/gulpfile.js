@@ -58,9 +58,9 @@ gulp.task('tag-release', function (cb) {
 });
 
 gulp.task('commit-changes', function () {
-  return gulp.src('.')
+  return gulp.src('../')
     .pipe(git.add())
-    .pipe(git.commit('[Prerelease] Bumped version number.'));
+    .pipe(git.commit('chore: bump version number'));
 });
 
 gulp.task('push-changes', function (cb) {
