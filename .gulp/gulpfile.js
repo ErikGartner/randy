@@ -83,7 +83,6 @@ gulp.task('release', function (callback) {
     'commit-changes',
     'push-changes',
     'tag-release',
-    'deploy-dokku',
     function (error) {
       if (error) {
         console.log(error.message);

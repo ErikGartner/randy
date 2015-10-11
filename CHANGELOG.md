@@ -1,3 +1,13 @@
+<a name="0.5.5"></a>
+## [0.5.5](//compare/0.5.4...v0.5.5) (2015-10-11)
+
+
+### Bug Fixes
+
+* removed root_url from env. daa34f9
+
+
+
 <a name="0.5.3"></a>
 ## [0.5.3](//compare/0.5.3...v0.5.3) (2015-10-11)
 
