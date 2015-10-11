@@ -4,6 +4,7 @@ var git = require('gulp-git');
 var shell = require('gulp-shell');
 var bump = require('gulp-bump');
 var conventionalChangelog = require('gulp-conventional-changelog');
+var runSequence = require('run-sequence');
 
 gulp.task('set-release-packages', shell.task([
   'meteor add accounts-facebook',
