@@ -1,4 +1,14 @@
 <a name="0.5.3"></a>
+## [0.5.3](//compare/0.5.3...v0.5.3) (2015-10-11)
+
+
+### Bug Fixes
+
+* last bug in gulpfile. a9db1fc
+
+
+
+<a name="0.5.3"></a>
 ## [0.5.3](//compare/0.5.2...v0.5.3) (2015-10-11)
 
 
