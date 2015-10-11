@@ -1,7 +1,7 @@
 {
   "name": "Randy",
   "description": "A simple list randomizer.",
-  "version": "0.5.2",
+  "version": "0.5.3",
   "dependencies": {
     "gulp": "^3.9.0",
     "gulp-bump": "^1.0.0",
