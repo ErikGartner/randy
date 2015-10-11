@@ -1,7 +1,7 @@
 {
-  "public" : {
+  "public": {
     "ga": {
-      "account":"UA-68367279-1"
+      "account": "UA-68367279-1"
     },
     "randy": {
       "version": "0.5.2"
