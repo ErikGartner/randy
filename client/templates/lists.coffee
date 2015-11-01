@@ -42,3 +42,6 @@ Template.lists.helpers
 
   isFavorite: ->
     return Favorites.findOne(lists: @_id)?
+
+  isMine: ->
+    return @author == Meteor.userId()

@@ -15,7 +15,8 @@ Template.generator.events
       if err
         console.log 'Error while getting samples!'
         return
-      res = _.map res, (val) -> return {items: _.map val, (v) -> return {item: v}}
+      res = _.map res, (val) ->
+        return {items: _.map val, (v) -> return {item: v}}
       Session.set('results', res)
 
   'click .remove-selector': (event) ->

@@ -27,7 +27,13 @@
 
       {{#esEach index="lists"}}
         <div class="item">
-          <i class="large {{#if public}}alternate unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
+          <i class="large
+          {{#if isMine}}
+            green alternate unlock
+          {{else}}
+            red {{#if isFavorite}}heart{{else}}empty heart{{/if}}
+          {{/if}}
+           icon middle aligned showEditList" data-id="{{_id}}"></i>
           <div class="content">
             <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a></span>
             <div class="description">{{listAuthor}}</div>
