@@ -1,3 +1,13 @@
+<a name="0.5.8"></a>
+## [0.5.8](//compare/0.5.7...v0.5.8) (2015-11-01)
+
+
+### Bug Fixes
+
+* Now icon now used for own lists also 45043f7
+
+
+
 <a name="0.5.6"></a>
 ## [0.5.6](//compare/0.5.6...v0.5.6) (2015-11-01)
 
