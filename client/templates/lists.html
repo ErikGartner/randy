@@ -16,7 +16,7 @@
       {{#ifEsInputIsEmpty index="lists"}}
           {{#each latestLists}}
               <div class="item">
-                <i class="large link icon {{#if public}}alternate unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
+                <i class="large link icon green {{#if public}}alternate unlock{{else}}lock{{/if}} icon middle aligned showEditList" data-id="{{_id}}"></i>
                 <div class="content">
                   <span class="header"><a class="listitem" data-id="{{_id}}">{{name}}</a></span>
                   <div class="description">{{listAuthor}}</div>
@@ -29,7 +29,7 @@
         <div class="item">
           <i class="large
           {{#if isMine}}
-            green alternate unlock
+            green {{#if public}}alternate unlock{{else}}lock{{/if}}
           {{else}}
             red {{#if isFavorite}}heart{{else}}empty heart{{/if}}
           {{/if}}
