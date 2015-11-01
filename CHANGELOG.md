@@ -1,3 +1,14 @@
+<a name="0.5.6"></a>
+## [0.5.6](//compare/0.5.6...v0.5.6) (2015-11-01)
+
+
+### Features
+
+* Improved icons, issue #14 3b85002
+* Now runs meteor 1.2.1 5457f86
+
+
+
 <a name="0.5.5"></a>
 ## [0.5.5](//compare/0.5.5...v0.5.5) (2015-10-13)
 
