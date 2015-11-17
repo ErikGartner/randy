@@ -17,6 +17,8 @@ Meteor.methods
       res = a.toLowerCase().localeCompare(b.toLowerCase())
       if res == 0
         return a.localeCompare(b)
+      else
+        return res
     name = name.trim()
 
     Lists.insert author: uid, name: name, items: items, public: publicList
@@ -57,6 +59,8 @@ Meteor.methods
       res = a.toLowerCase().localeCompare(b.toLowerCase())
       if res == 0
         return a.localeCompare(b)
+      else
+        return res
     name = name.trim()
 
     Lists.update {_id:id}, $set: name:name, items:items, public: publicList
