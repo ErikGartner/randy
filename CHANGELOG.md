@@ -1,4 +1,14 @@
 <a name="0.5.8"></a>
+## [0.5.8](//compare/0.5.8...v0.5.8) (2015-11-17)
+
+
+### Bug Fixes
+
+* Lists now sort themselves again. 52c4912
+
+
+
+<a name="0.5.8"></a>
 ## [0.5.8](//compare/0.5.7...v0.5.8) (2015-11-01)
 
 
