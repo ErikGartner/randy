@@ -3,6 +3,8 @@ Ammon
 Amon
 Amon-ra
 Amun
+Anapa
+Anoubis
 Anubis
 Asar
 Atem
@@ -14,6 +16,7 @@ Bastet
 Djehuti
 Hathor
 Heru
+Het-heru
 Horos
 Horus
 Iah
@@ -27,7 +30,7 @@ Ptah
 Ra
 Re
 Set
-Seth 
+Seth
 Sutekh
 Thoth
 Yamanu

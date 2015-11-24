@@ -8,7 +8,7 @@ Aonghus
 Bébinn
 Bile
 Bláthnat
-Bran 
+Bran
 Bridget
 Brighid
 Brigid
@@ -27,15 +27,21 @@ Conor
 Cúchulainn
 Dagda
 Dáire
+Daireann
 Deirdre
 Derdriu
 Diarmaid
+Diarmait
+Diarmuid
+Doireann
+Doirend
 Éber
 Éibhear
 Éimhear
 Emer
 Eógan
 Eoghan
+Ériu
 Étaín
 Fachtna
 Fearghas
@@ -46,7 +52,7 @@ Feidelm
 Feidlimid
 Fergus
 Fiachra
-Finn 
+Finn
 Finnguala
 Finnuala
 Fintan
@@ -74,8 +80,9 @@ Muirne
 Naoise
 Neas
 Neasa
-Ness 
-Nessa 
+Nechtan
+Ness
+Nessa
 Niamh
 Nuada
 Nuadha
@@ -89,3 +96,4 @@ Sabia
 Sadb
 Sadbh
 Sadhbh
+Sionann

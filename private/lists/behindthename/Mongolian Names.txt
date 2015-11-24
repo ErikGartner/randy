@@ -1,3 +1,4 @@
+Altansarnai
 Altantsetseg
 Batbayar
 Bat-erdene
@@ -8,12 +9,17 @@ Enkhtuya
 Erdenechimeg
 Ganbaatar
 Ganzorig
+Gerel
+Khulan
 Munkhtsetseg
 Naranbaatar
+Narangerel
 Narantsetseg
 Nergüi
 Odtsetseg
 Otgonbayar
 Oyunchimeg
 Sarangerel
+Sarnai
 Tömörbaatar
+Tsetseg

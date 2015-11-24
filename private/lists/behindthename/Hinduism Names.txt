@@ -11,6 +11,8 @@ Bala
 Baladeva
 Bharata
 Bhaskara
+Bhima
+Bhumi
 Brahma
 Brijesha
 Chandra
@@ -60,8 +62,9 @@ Madhavi
 Mahesha
 Mani
 Manu
-Maya 
-Mina 
+Maya
+Mina
+Mitra
 Mohana
 Mohini
 Mukesha
@@ -116,11 +119,12 @@ Sunita
 Suresha
 Surya
 Sushila
-Tara 
+Tara
 Uma
 Usha
 Ushas
 Valli
+Varuna
 Vasanta
 Vasu
 Vayu

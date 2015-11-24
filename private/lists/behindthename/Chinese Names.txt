@@ -1,9 +1,9 @@
 Ah
-Ai 
-An 
+Ai
+An
 Bai
-Bao 
-Bo 
+Bao
+Bo
 Chang
 Chao
 Chen
@@ -27,7 +27,7 @@ Hui
 Jia
 Jian
 Jiang
-Jin 
+Jin
 Jing
 Ju
 Jun
@@ -37,7 +37,7 @@ Li
 Lim
 Lin
 Ling
-Mei 
+Mei
 Min
 Ming
 Mu
@@ -53,10 +53,10 @@ Ru
 Shi
 Shu
 Shui
-Shun 
-Su 
+Shun
+Su
 Tai
-Tu 
+Tu
 Wei
 Wen
 Wu

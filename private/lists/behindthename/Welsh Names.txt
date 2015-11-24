@@ -1,5 +1,5 @@
 Aderyn
-Aeron 
+Aeron
 Aerona
 Aeronwen
 Aeronwy
@@ -28,8 +28,7 @@ Bleddyn
 Blodeuwedd
 Blodeuyn
 Blodwen
-Braith
-Bran 
+Bran
 Branwen
 Briallen
 Brin
@@ -56,8 +55,8 @@ Catrin
 Cefin
 Ceinwen
 Celyn
-Ceri 
-Ceri 
+Ceri
+Ceri
 Ceridwen
 Cerridwen
 Cerridwyn
@@ -88,7 +87,7 @@ Eifion
 Eiluned
 Eilwen
 Einion
-Eira 
+Eira
 Eirian
 Eirlys
 Eirwen
@@ -96,7 +95,7 @@ Elain
 Elen
 Eleri
 Elin
-Ellis 
+Ellis
 Eluned
 Emlyn
 Emrys
@@ -113,6 +112,7 @@ Fflur
 Ffraid
 Ffransis
 Folant
+Gaenor
 Gareth
 Gawain
 Geraint
@@ -155,6 +155,7 @@ Gwilim
 Gwillym
 Gwilym
 Gwladus
+Gwladys
 Gwyn
 Gwynedd
 Gwyneira
@@ -195,8 +196,6 @@ Islwyn
 Ithel
 Ivor
 Iwan
-Kendal
-Kendall
 Leolin
 Lewella
 Lleucu
@@ -241,7 +240,7 @@ Mervyn
 Meuric
 Meurig
 Mihangel
-Morgan 
+Morgan
 Morwen
 Morwenna
 Mostyn
@@ -252,7 +251,7 @@ Neirin
 Nerys
 Nest
 Nesta
-Nia 
+Nia
 Non
 Nye
 Ofydd
@@ -260,7 +259,7 @@ Olwen
 Olwin
 Olwyn
 Owain
-Owen 
+Owen
 Owena
 Paderau
 Padrig
@@ -272,7 +271,6 @@ Pryderi
 Reece
 Rees
 Reese
-Rhamantus
 Rheinallt
 Rhian
 Rhiannon
@@ -304,9 +302,11 @@ Taffy
 Talfryn
 Taliesin
 Tegan
+Tegid
 Tegwen
 Tesni
 Tiwlip
+Tomi
 Tomos
 Trahaearn
 Traherne
@@ -315,8 +315,9 @@ Trev
 Trevor
 Tristan
 Trystan
-Tudor 
+Tudor
 Tudur
+Twm
 Urien
 Vaughan
 Vaughn
@@ -325,6 +326,6 @@ Winnifred
 Wyn
 Wynfor
 Wynn
-Wynne 
+Wynne
 Yale
 Yorath

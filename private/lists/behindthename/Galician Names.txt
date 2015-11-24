@@ -1,5 +1,5 @@
 Afonso
-Alberte 
+Alberte
 Aleixo
 Alexandre
 Antía
@@ -11,7 +11,7 @@ Bieito
 Brais
 Branca
 Breixo
-Carme 
+Carme
 Catarina
 Cibrán
 Dores
@@ -20,14 +20,15 @@ Iago
 Iria
 Lía
 Lino
-Lois 
+Lois
 Margarida
 María
 Nicolau
 Noela
 Paulo
 Rodrigo
-Roi 
+Roi
+Rosalía
 Sabela
 Uxía
 Uxío
@@ -36,5 +37,6 @@ Xabier
 Xesús
 Xoán
 Xoana
+Xoel
 Xosé
 Xurxo

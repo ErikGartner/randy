@@ -12,12 +12,12 @@ Consus
 Cupid
 Diana
 Dido
-Elissa 
-Evander 
+Elissa
+Evander
 Evandrus
 Fauna
 Faunus
-Felicitas 
+Felicitas
 Flora
 Gemini
 Hercules
@@ -33,6 +33,8 @@ Juno
 Jupiter
 Juturna
 Juventas
+Lara
+Larunda
 Laverna
 Lavinia
 Liber
@@ -40,8 +42,8 @@ Libitina
 Lucina
 Lucretia
 Luna
-Maia 
-Maia 
+Maia
+Maia
 Mars
 Mercurius
 Mercury
@@ -49,7 +51,7 @@ Minerva
 Naenia
 Neptune
 Neptunus
-Nona 
+Nona
 Numitor
 Pax
 Pluto
@@ -73,5 +75,5 @@ Terminus
 Ulysses
 Venus
 Vesta
-Victoria 
+Victoria
 Vulcan
