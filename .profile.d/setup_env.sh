@@ -1,1 +1,1 @@
-METEOR_SETTINGS=$(cat "../settings.json")
+METEOR_SETTINGS=$(cat "settings.json")
