@@ -1,1 +1,1 @@
-METEOR_SETTINGS=$(cat "settings.json")
+export METEOR_SETTINGS=$(cat /app/settings.json)
