@@ -1,3 +1,13 @@
+<a name=""></a>
+# [](//compare/0.5.12...vundefined) (2015-12-04)
+
+
+### Bug Fixes
+
+* Now properly loads METEOR_SETTINGS on heroku/dokku 7d3d374
+
+
+
 <a name="0.5.12"></a>
 ## [0.5.12](//compare/0.5.11...v0.5.12) (2015-12-04)
 
