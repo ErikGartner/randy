@@ -27,6 +27,6 @@ aldeed:collection2
 check
 audit-argument-checks
 iron:router
-datariot:ganalytics
 reywood:publish-composite
 accounts-facebook
+okgrow:analytics
