@@ -1,3 +1,13 @@
+<a name="0.6.1"></a>
+## [0.6.1](//compare/0.6.0...v0.6.1) (2016-02-08)
+
+
+### Bug Fixes
+
+* Remove old analytics call 85a8ee6
+
+
+
 <a name="0.5.13"></a>
 ## [0.5.13](//compare/0.5.13...v0.5.13) (2015-12-04)
 

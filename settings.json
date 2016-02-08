@@ -1,10 +1,12 @@
 {
   "public": {
     "analyticsSettings": {
-      "Google Analytics" : {"trackingId": "UA-68367279-1"}
+      "Google Analytics": {
+        "trackingId": "UA-68367279-1"
+      }
     },
     "randy": {
-      "version": "0.6.0"
+      "version": "0.6.1"
     }
   }
 }
