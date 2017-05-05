@@ -1,0 +1,23 @@
+{
+  "name": "randy",
+  "version": "1.0.0",
+  "description": "A program that allows the user to add and randomly pick from list.",
+  "main": "index.js",
+  "dependencies": {
+    "babel-runtime": "^6.23.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ErikGartner/randy.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ErikGartner/randy/issues"
+  },
+  "homepage": "https://github.com/ErikGartner/randy#readme"
+}
