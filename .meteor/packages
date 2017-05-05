@@ -27,7 +27,6 @@ audit-argument-checks@1.0.7
 iron:router
 reywood:publish-composite
 accounts-facebook@1.1.1
-reywood:iron-router-ga
 standard-minifier-js
 shell-server
 facebook-config-ui
