@@ -4,9 +4,10 @@
       "id": "UA-68367279-1",
       "set": {
         "forceSSL": true
+      }
     },
     "randy": {
-      "version": "0.7.0"
+      "version": "0.7.1"
     }
   }
 }
