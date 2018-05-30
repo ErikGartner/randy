@@ -1,10 +1,10 @@
 {
   "public": {
-    "analyticsSettings": {
-      "Google Analytics": {
-        "trackingId": "UA-68367279-1"
-      }
-    },
+    "ga": {
+      "id": "UA-68367279-1",
+      "set": {
+        "forceSSL": true
+    }
     "randy": {
       "version": "0.7.0"
     }
