@@ -85,7 +85,7 @@ mongo-decimal@0.1.2
 mongo-dev-server@1.1.0
 mongo-id@1.0.7
 mongo-livedata@1.0.12
-npm-mongo@3.3.0
+npm-mongo@3.6.0
 oauth@1.2.8
 oauth2@1.2.1
 observe-sequence@1.0.16
